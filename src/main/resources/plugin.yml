@@ -1,0 +1,4 @@
+main: dev.tutorial.Tutorial
+name: Tutorial
+version: ${project.version}
+author: Guayabita
