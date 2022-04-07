@@ -17,18 +17,18 @@ public class Tutorial extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
         getServer().getPluginManager().registerEvents(new WelcomeMessage(), this);
-        ChatUtil.log("&a&lTutorial &7Plugin has been enabled!");
+        ChatUtil.log("&b&lTutorial &7Plugin has been &aenabled!");
+
         this.commandManager = new CommandManager(this, new ArrayList<>());
         this.loadCommands();
     }
-
-
-
-    @Override
-    public void onDisable() {
-        ChatUtil.log("&c&lTutorial &7Plugin has been disabled!");
-    }
+// Comentado por que no es realmente necesario con este codigo y decidi omitirlo
+//    @Override
+//    public void onDisable() {
+//        ChatUtil.log("&b&lTutorial &7Plugin has been &cdisabled!");
+//    }
 
     private void loadCommands() {
         new TutorialCommand();
