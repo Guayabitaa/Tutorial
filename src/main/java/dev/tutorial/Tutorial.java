@@ -23,12 +23,17 @@ public class Tutorial extends JavaPlugin {
 
         this.commandManager = new CommandManager(this, new ArrayList<>());
         this.loadCommands();
+        this.loadEvents();
     }
-// Comentado por que no es realmente necesario con este codigo y decidi omitirlo
-//    @Override
-//    public void onDisable() {
-//        ChatUtil.log("&b&lTutorial &7Plugin has been &cdisabled!");
-//    }
+
+    private void loadEvents() {
+        getServer().getPluginManager().registerEvents(new WelcomeMessage(), this);
+    }
+
+    @Override
+    public void onDisable() {
+        ChatUtil.log("&b&lTutorial &7Plugin has been &cdisabled!");
+    }
 
     private void loadCommands() {
         new TutorialCommand();
