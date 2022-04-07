@@ -10,10 +10,7 @@ public class WelcomeMessage implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        if(event.getPlayer().hasPermission("event.welcome")) {
             Player player = event.getPlayer();
             ChatUtil.sender(player, "&7Welcome to the server, &b" + player.getName() + "&7!");
-        }
     }
 }
-
