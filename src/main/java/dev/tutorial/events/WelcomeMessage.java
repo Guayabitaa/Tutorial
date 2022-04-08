@@ -1,6 +1,7 @@
 package dev.tutorial.events;
 
-import dev.panda.chat.ChatUtil;
+
+import dev.tutorial.utilities.chat.ChatUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

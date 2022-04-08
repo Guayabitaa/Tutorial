@@ -1,11 +1,11 @@
 package dev.tutorial.commands;
 
 import com.google.common.collect.Lists;
-import dev.panda.chat.ChatUtil;
-import dev.panda.command.BaseCommand;
-import dev.panda.command.Command;
-import dev.panda.command.CommandArgs;
 import dev.tutorial.commands.subcommands.TutorialVersionCommand;
+import dev.tutorial.utilities.chat.ChatUtil;
+import dev.tutorial.utilities.command.BaseCommand;
+import dev.tutorial.utilities.command.Command;
+import dev.tutorial.utilities.command.CommandArgs;
 
 import java.util.List;
 

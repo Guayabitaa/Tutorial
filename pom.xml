@@ -30,14 +30,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- PandaLib -->
-        <dependency>
-            <groupId>dev.panda</groupId>
-            <artifactId>Panda</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
