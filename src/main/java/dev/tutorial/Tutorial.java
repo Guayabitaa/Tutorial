@@ -1,10 +1,9 @@
 package dev.tutorial;
 
-
+import dev.panda.chat.ChatUtil;
+import dev.panda.command.CommandManager;
 import dev.tutorial.commands.TutorialCommand;
 import dev.tutorial.events.WelcomeMessage;
-import dev.tutorial.utilities.chat.ChatUtil;
-import dev.tutorial.utilities.command.CommandManager;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,31 +18,22 @@ public class Tutorial extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        getServer().getPluginManager().registerEvents(new WelcomeMessage(), this);
         ChatUtil.log("&b&lTutorial &7Plugin has been &aenabled!");
 
         this.commandManager = new CommandManager(this, new ArrayList<>());
         this.loadCommands();
-        this.loadEvents();
     }
-
-    @Override
-    public void onDisable() {
-
-        ChatUtil.log("&b&lTutorial &7Plugin has been &cdisabled!");
-    }
-
-    //------------------------------------------------------------------------------------------------------------------
+// Comentado por que no es realmente necesario con este codigo y decidi omitirlo
+//    @Override
+//    public void onDisable() {
+//        ChatUtil.log("&b&lTutorial &7Plugin has been &cdisabled!");
+//    }
 
     private void loadCommands() {
         new TutorialCommand();
+
     }
-
-    private void loadEvents() {
-        getServer().getPluginManager().registerEvents(new WelcomeMessage(), this);
-    }
-
-    //------------------------------------------------------------------------------------------------------------------
-
     public static Tutorial get() {
         return getPlugin(Tutorial.class);
     }
